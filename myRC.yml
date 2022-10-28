@@ -1,18 +1,18 @@
 apiVersion: v1
 kind: ReplicationController
 metadata:
-  name: mynginx-rc
+  name: abhi-rc
 spec:
-  replicas: 4
+  replicas: 3
   selector:
-    app: mynginx
+    app: myjavaapp
   template:
     metadata:
       labels:
-        app: mynginx
+        app: myjavaapp
     spec:
       containers:
-      - name: nginxcontianer
-        image: nginx
+      - name: myjavaapp
+        image: abhishek7484/myjavaapp18oct22:1
         ports:
-        - containerPort: 80
+        - containerPort: 8080
